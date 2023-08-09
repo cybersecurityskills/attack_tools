@@ -1,5 +1,11 @@
 from scapy.all import *
+import sys
 
-ip = IP(src='192.168.100.1',dst='192.168.100.2')
-tcp = TCP(sport=12345,dport=22,flags='S',seq=12344)
-send(ip/tcp)
+if len(sys.argv) < 2:
+  print("Usage: packet_send_ttl.py SRC_IP DST_IP TTL_VALUE\n")  
+  sys.exit()
+
+ip = IP(src=sys.argv[1],dst=sys.argv[2],ttl=int(sys.argv[3]))
+p1 = (ip)
+print("Sending",p1,"TTL",p1.ttl)
+send(p1) 
