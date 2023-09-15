@@ -14,7 +14,7 @@ countries["US"] = '45.134.144.113'
 countries["PAKISTAN"] = '101.53.233.81'
  
 if len(sys.argv) < 3:
-  print("Usage: packet_send_country.py COUNTRY DST_IP DST_PORT\n")
+  print("Usage: packet_send_country_tcp.py COUNTRY DST_IP DST_PORT\n")
   print("Valid countries are:"," ".join(countries.keys()))
   sys.exit()
 
