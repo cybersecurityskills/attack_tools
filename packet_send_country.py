@@ -22,5 +22,5 @@ if len(sys.argv) < 2:
 
 ip = IP(src=countries[sys.argv[1]],dst=sys.argv[2])
 p1 = (ip)
-print("Sending",p1,"TTL",p1.ttl)
+print("Sending",p1)
 send(p1,iface="enp0s8") 
